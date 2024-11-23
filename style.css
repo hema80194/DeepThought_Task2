@@ -1,0 +1,358 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 40px;
+    margin-right: 10px;
+}
+.nav-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3a3a3a;
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.icon-links {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.nav-submit {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.collapsible-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px auto;
+    margin-left:0px;
+    width: 50%;
+    max-width: 600px;
+}
+
+.arrow-button {
+    background-color: #1a73e8;
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+#explore{
+    color:black;
+    font-size:15px;
+    font-weight:bold;
+}
+
+.arrow-button:hover {
+    background-color: #0056b3;
+}
+
+.arrow-button.open {
+    transform: rotate(180deg);
+}
+
+.collapsible-content {
+    margin-top: 15px;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    width: 100%;
+}
+
+.collapsible-content p {
+    margin: 0;
+    color: #555;
+    font-size: 16px;
+    text-align: center;
+}
+.main-section {
+    padding: 20px;
+    text-align: left;
+}
+.content {
+    padding: 20px;
+    text-align: left;
+    background-color: #abb3bb;
+    border-radius: 10px;
+}
+.main-section h1 {
+    font-size: 24px;
+    color: #1a73e8;
+    margin-bottom: 10px;
+}
+
+.main-section p {
+    margin-bottom: 20px;
+}
+.fir {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    position: relative; 
+}
+.card::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ffffff;
+    z-index: 1;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.card-header {
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info-icon {
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.card h2 {
+    margin: 0;
+    color: #1a73e8;
+}
+.thread h3 {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.sub-thread-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.sub-thread-container textarea {
+    width: 50%;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    resize: none;
+}
+
+.thread-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.icon-btn {
+    font-size: 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.dropdown {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.sub-thread-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sub-thread-btn:hover {
+    background-color: #0056b3;
+}
+
+.summary {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    resize: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+textarea {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.card-content {
+    margin-top: 10px;
+}
+
+.card-content p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-field {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.text-area {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 150px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.SYP {
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 50%;
+    border-color: 3px solid #555;
+    display: flex;
+}
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.SA {
+    color: black;
+    background-color: #F2F2F2;
+    width: 100%;
+    height: 43px;
+    top: 1186px;
+    left: 768px;
+    gap: 0px;
+    opacity: 0px;
+}
+.SA strong {
+    padding-top: 30px;
+    padding-left: 40px;
+}
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-right {
+        align-items: center;
+    }
+}

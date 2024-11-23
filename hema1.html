@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout with Navbar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-left">
+            <img src="logo.png" alt="Logo" class="logo">
+            <span class="nav-title">Deep Thought</span>
+        </div>
+        <div class="nav-right">
+            <div class="icon-links">
+                <a href="#home"><img src="Group 1097.png" alt="Home" class="nav-icon"></a>
+                <a href="#tasks"><img src="Group 1100.png" alt="Tasks" class="nav-icon"></a>
+                <a href="#notifications"><img src="Vector (1).png" alt="Settings" class="nav-icon"></a>
+                <a href="#notifications"><img src="Ellipse 53.png" alt="Settings" class="nav-icon"></a>
+            </div>
+            <button class="nav-submit">Submit Task</button>
+        </div>
+    </header>
+    <div class="collapsible-section">
+        <button class="arrow-button" id="toggle-btn">&rarr;</button>
+        <div class="collapsible-content" id="collapsible-content">
+            <p>
+                <ul>
+                    <li id="explore">Explore the world of management</li>
+                    <li>Explore the World Of management</li>
+                    <li>Threadbuild</li>
+                    <li>Structure of your pointers</li>
+                    <li>4SA Method</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Section -->
+    <section class="main-section">
+        <h1>Technical Project Management</h1>
+        <div class="content">
+            <p class="fir">Explore the world of management.</p>
+            <p class="sec">As a project manager, you play an important role in leading a project through initiation, planning, execution, monitoring, controlling, and completion.</p>
+        </div>
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Technical Project Management</h2>
+                    <span class="info-icon">i</span>
+                </div>
+                <p>Description: Story of Alignment Scope of Agility Specific Accountable Staggered Approach.</p>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/LNpGKYUB0UI?si=o_FMLKtX0fwOvV_z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="threadbuild-container">
+                <div class="card-header">
+                    <h2>Threadbuild</h2>
+                    <span class="info-icon">i</span>
+                </div>
+                <p class="description">
+                    Watch the video and threadbuild, and jot out key threads while watching the video.
+                </p>
+                <div class="thread">
+                    <h3>Thread A</h3>
+                    <div class="sub-thread-container">
+                        <textarea placeholder="Sub thread 1"></textarea>
+                        <textarea placeholder="Sub Interpretation 1"></textarea>
+                    </div>
+                    <div class="thread-options">
+                        <button class="icon-btn">💡</button>
+                        <button class="icon-btn">💬</button>
+                        <button class="icon-btn">⬇️</button>
+                        <select class="dropdown">
+                            <option>Select Category</option>
+                        </select>
+                        <select class="dropdown">
+                            <option>Select Process</option>
+                        </select>
+                    </div>
+                    <button class="sub-thread-btn">+ Sub-thread</button>
+                    <textarea class="summary" placeholder="Summary for Thread A"></textarea>
+                </div>
+                <button class="submit-btn">Submit Thread</button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Structure Your Pointers</h2>
+                    <span class="info-icon">i</span>
+                </div>
+                <div class="card-content">
+                    <p><strong>Description:</strong> Write a 300-400 word article from your thread. Publish your understanding and showcase your insights to the world.</p>
+                    <form>
+                        <label for="title">Title</label>
+                        <input type="text" id="title" class="input-field" placeholder="Enter your title here">
+                        
+                        <label for="content">Content</label>
+                        <textarea id="content" class="text-area" placeholder="Write your content here"></textarea>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>4SA Method</h2>
+                    <span class="info-icon">i</span>
+                </div>
+                <p>Description: To explore new roadmaps.</p>
+                <p class="SA"><img src="Vector.png"><strong>Introduction</strong> <span class="arrow">→</span></p>
+                <p>The 4SA method: How to bring idea into progress?</p>
+                <p class="SA"><img src="Vector.png"><strong>Thread A</strong> <span class="arrow">→</span></p>
+                <p>How are you going to develop your strategy? Which method are you going to use for the strategy?</p>
+                <p class="SA"><img src="Vector.png"><strong>Example 1</strong> <span class="arrow">→</span></p>
+                <p>You have a concept, how will you put it into progress?</p>
+            </div>
+        </div>
+    </section>
+    <script>
+document.getElementById("toggle-btn").addEventListener("click", function () {
+    const content = document.getElementById("collapsible-content");
+    const button = this;
+
+    if (content.style.display === "block") {
+        content.style.display = "none";
+        button.classList.remove("open");
+    } else {
+        content.style.display = "block"; 
+        button.classList.add("open");
+    }
+});
+
+    </script>
+</body>
+</html>
